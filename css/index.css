@@ -81,6 +81,7 @@
 /* 购物车 */
 .shop-cart{
     margin-left: 20px;
+    position: relative;
 }
 .shop-cart a{
     width: 120px;
@@ -88,10 +89,102 @@
     background-color: #424242;
     text-align: center;
 }
-.shop-cart:hover a{
+/* 购物车框 */
+.shop-block{
+    position: absolute;
+    line-height: 1;
+    left: -181px;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    border: 1px white solid;
+    border-top: none;
+    box-shadow: 0 0 10px  rgba(0,0,0,.3);
+    transition: height 0.3s;
+}
+/* 字体居中 */
+.shop-block span{
+    color: #424242;
+    padding: 40px 0;
+    display: block;
+    text-align: center;
+}
+/* 购物车动画效果 */
+.shop-cart:hover a,
+.shop-cart:hover .shop-block
+{
     background-color: #fff;
     color: #ff6700;
+    height: 100px;
+    display: block;
+    
 }
 .shop-cart i{
     margin-right: 2px;
+}
+/* 设置header */
+.header{
+    height: 100px;
+
+} 
+.header .logo{
+    float: left;
+    margin-top: 21px;
+    width: 56px;
+    height: 56px;
+    position: relative;
+    overflow: hidden;
+}
+/* 小米logo */
+.header .logo .mi{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background-image: url(../img/xiaomi\ 小米.svg);
+    float: left;
+    background-size: 56px;
+}
+.header .logo .home{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin: 5px 5px;
+    background-image: url(../img/xiaomi\ 小米.svg);
+    float: left;
+    background-size: 45px;
+    display: none;
+}
+/* 小米logo点击动画效果 */
+.header .logo:active .home{
+    display: block;
+}
+.header .logo:active .mi{
+    display: none;
+}
+/* 商品导航 */
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}
+.header .nav{
+    height: 100%;
+    line-height: 100px;
+    padding-left: 58px;
+    
+}
+/* 导航条中的li */
+.nav-wrapper li{
+    float: left;
+}
+.nav-wrapper a{
+    display: block;
+    font-size: 16px;
+    color: #252525;
+    margin-right: 20px;
+}
+.nav-wrapper a:hover{
+    color: #ff6700;
+}
+.all-goods{
+    visibility: hidden;
 }
