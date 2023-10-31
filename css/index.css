@@ -1,0 +1,97 @@
+/* 顶部导航条 */
+.topbar-wrapper{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+.topbar a{
+    font-size: 12px;
+    display: block;
+    color: #b0b0b0;
+}
+/* 导航字体选中效果 */
+.topbar a:hover{
+    color: #fff;
+}
+/* 分割线 */
+.topbar .line{
+    font-size: 12px;
+    color: #424242;
+    margin: 0 8px;
+}
+/* 左侧导航栏 */
+.service, .topbar li{
+    float: left;
+}
+/* 右侧导航栏 */
+.shop-cart, .user-info{
+    float: right;
+}
+/* app */
+.app{
+    position: relative;
+}
+/* 小三角 */
+.app::after{
+    display: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    border:8px solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/* app下拉 */
+.app .qrcode{
+    width: 124px;
+    height: 0;
+    overflow: hidden;
+    left: -38px;
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    position: absolute;
+    /* 设置缓慢出现动画效果 */
+    transition:height 0.3s;
+}
+.app:hover .qrcode,
+.app:hover::after
+{
+    display: block;
+    height: 148px;
+}
+/* 二维码图片 */
+.app img{
+    width: 90px;
+    margin:17px;
+    margin-bottom: 10px;
+}
+/* 二维码文字 */
+.app span{
+    font-size: 14px;
+    color: #000;
+}
+/* 购物车 */
+.shop-cart{
+    margin-left: 20px;
+}
+.shop-cart a{
+    width: 120px;
+    height: 40px;
+    background-color: #424242;
+    text-align: center;
+}
+.shop-cart:hover a{
+    background-color: #fff;
+    color: #ff6700;
+}
+.shop-cart i{
+    margin-right: 2px;
+}
