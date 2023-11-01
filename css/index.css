@@ -60,6 +60,7 @@
     position: absolute;
     /* 设置缓慢出现动画效果 */
     transition:height 0.3s;
+    z-index: 999;
 }
 .app:hover .qrcode,
 .app:hover::after
@@ -101,6 +102,7 @@
     border-top: none;
     box-shadow: 0 0 10px  rgba(0,0,0,.3);
     transition: height 0.3s;
+    z-index: 999;
 }
 /* 字体居中 */
 .shop-block span{
@@ -127,6 +129,9 @@
     height: 100px;
 
 } 
+.header-wrapper{
+    position: relative;
+}
 .header .logo{
     float: left;
     margin-top: 21px;
@@ -187,4 +192,59 @@
 }
 .all-goods{
     visibility: hidden;
+}
+/* 设置下拉商品 */
+.nav .goods-info{
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: height 0.3s;
+    z-index: 999;
+}
+.nav .goods-display:hover ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    border-top: 1px solid rgb(224,224,224);
+    box-shadow: 0 5px 3px rgba(0,0,0,.2);
+}
+/* 设置搜索框容器 */
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: 25px;
+}
+/* 输入 */
+.search-wrapper .search-inp{
+    box-sizing: border-box;
+    width: 222px;
+    border: none;
+    float: left;
+    padding: 0 10px;
+    height: 50px;
+    outline: none;
+    border: 1px solid rgb(224,224,224);
+}
+/* 按钮 */
+.search-wrapper .search-btn{
+    width: 52px;
+    height: 50px;
+    border: none;
+    float: left;
+    border: 1px solid rgb(224,224,224);
+    border-left: none;
+    background-color: #fff;
+}
+/* 设置input获取焦点的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus+.search-btn{
+    border: 1px solid #ff6700;
+}
+/* 搜索图标移入样式 */
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color: #fff;
 }

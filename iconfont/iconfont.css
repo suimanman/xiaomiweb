@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4298938 */
-  src: url('iconfont.woff2?t=1698669455366') format('woff2'),
-       url('iconfont.woff?t=1698669455366') format('woff'),
-       url('iconfont.ttf?t=1698669455366') format('truetype');
+  src: url('iconfont.woff2?t=1698824990628') format('woff2'),
+       url('iconfont.woff?t=1698824990628') format('woff'),
+       url('iconfont.ttf?t=1698824990628') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search1:before {
+  content: "\e605";
+}
+
+.icon-search:before {
+  content: "\e6ad";
 }
 
 .icon-gouwuchekong:before {
