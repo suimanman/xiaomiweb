@@ -55,6 +55,8 @@ document.querySelector(".login-btn").addEventListener("click", function () {
     document.querySelector(".login").classList.add("hidden");
     document.querySelector(".overlay").classList.add("hidden");
     document.querySelector(".login-error").classList.add("hidden");
+    document.querySelector(".users").classList.remove("hidden");
+    document.querySelector(".info-login").classList.add("hidden");
     alert("登录成功！");
   } else {
     document.querySelector(".login-error").classList.remove("hidden");
