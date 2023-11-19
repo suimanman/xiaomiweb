@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../iconfont/iconfont.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- 顶部导航条 -->
@@ -67,7 +68,7 @@
         <ul class="user-info">
           <li><a class="info-login" href="javascript:;">登录</a></li>
           <li class="line">|</li>
-          <li><a href="javascript:;">注册</a></li>
+          <li><a class="info-register" href="javascript:;">注册</a></li>
           <li class="line">|</li>
           <li><a href="javascript:;">消息通知</a></li>
         </ul>
@@ -90,6 +91,26 @@
       </div>
       <button class="login-btn">登 录</button>
       <p class="login-error hidden">用户名或密码错误！</p>
+    </div>
+    <!-- 注册 -->
+    <div class="register hidden">
+      <h1>小米账号注册</h1>
+      <button class="register-close iconfont">&#xe617;</button>
+      <div class="input-register">
+        <span class="register-ipt"
+          >用户名：<input
+            id="user-ipt-register"
+            type="text"
+            name="user-register"
+        /></span>
+        <span class="password-ipt-register"
+          >密码：&nbsp;<input
+            id="paswd-ipt-register"
+            type="password"
+            name="password-register"
+        /></span>
+      </div>
+      <button class="register-btn">注 册</button>
     </div>
     <!-- 头部外部容器 -->
     <div class="header-wrapper">

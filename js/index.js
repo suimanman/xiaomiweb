@@ -1,8 +1,15 @@
 "use strict";
-let username = "suiman";
-let password = "123456";
 let now = 1;
 let next = 0;
+const register_user = document.getElementById(".user-ipt-register");
+const register_password = document.getElementById(".paswd-ipt-register");
+const register_btn = document.querySelector(".register-btn");
+const info_register = document.querySelector(".info-register");
+const register = document.querySelector(".register");
+const register_close = document.querySelector(".register-close");
+const overlay = document.querySelector(".overlay");
+const register_password_ipt = document.getElementById(".user-ipt-register");
+const register_user_ipt = document.getElementById(".password-ipt-register");
 // 轮播图箭头
 document.querySelector(".prev").addEventListener("click", function () {
   if (now == 1) next = 4;
@@ -47,6 +54,10 @@ document.querySelector(".info-login").addEventListener("click", function () {
   document.querySelector(".login").classList.remove("hidden");
   document.querySelector(".overlay").classList.remove("hidden");
 });
+info_register.addEventListener("click", function () {
+  register.classList.remove("hidden");
+  document.querySelector(".overlay").classList.remove("hidden");
+});
 // 登录判断
 document.querySelector(".login-btn").addEventListener("click", function () {
   let user = document.getElementById("user-ipt").value;
@@ -66,4 +77,26 @@ document.querySelector(".login-close").addEventListener("click", function () {
   document.querySelector(".login").classList.add("hidden");
   document.querySelector(".overlay").classList.add("hidden");
   document.querySelector(".login-error").classList.add("hidden");
+});
+register_close.addEventListener("click", function () {
+  register.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+register_btn.addEventListener("click", function () {
+  document.querySelector(".register").classList.add("hidden");
+  document.querySelector(".overlay").classList.add("hidden");
+});
+// 注册
+
+register_btn.addEventListener("click", function () {
+  let usrname = document.getElementById("user-ipt-register").value;
+  let pasword = document.getElementById("paswd-ipt-register").value;
+  $.ajax({
+    url: "http://127.0.0.1:3000/user/adduser/",
+    data: {
+      username: usrname,
+      password: pasword,
+    },
+    type: "GET",
+  });
 });
